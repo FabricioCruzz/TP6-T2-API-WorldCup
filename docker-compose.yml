@@ -1,0 +1,22 @@
+version: '3'
+services:
+  app:
+    build: .
+    command: npm start
+    ports:
+      - '8087:8087'
+    volumes:
+      - ./api:/usr/app
+
+  database:
+    container_name: db-postgres
+    image: postgres:10.17
+    restart: always
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_DB=worldcup"
+    ports:
+      - 5441:5432
+    volumes:
+      - /dir/on/host:/var/lib/postgresql/data

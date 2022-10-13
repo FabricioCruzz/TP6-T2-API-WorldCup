@@ -1,6 +1,7 @@
 version: '3'
 services:
   app:
+    container_name: api-node
     build: .
     command: npm start
     ports:
@@ -18,5 +19,3 @@ services:
       - "POSTGRES_DB=worldcup"
     ports:
       - 5441:5432
-    volumes:
-      - /dir/on/host:/var/lib/postgresql/data

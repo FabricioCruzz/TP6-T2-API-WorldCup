@@ -1,11 +1,11 @@
-const match = require('../model/index')
+const { match } = require('../model/index')
 
-const create = () => {
-
+const create = async data => {
+    await match.create(data)
 }
 
-const getAll = () => {
-
+const getAll = async () => {
+    return await match.findAll()
 }
 
 const getByTeam = team => {

@@ -12,4 +12,4 @@ app.use('/api/v1/worldcup', router)
 //     console.log(`Conectado com o banco`) 
 // })
 
-app.listen(PORT, () => console.log(`Server up on PORT ${PORT}. To open access http://localhost:8087`))
+app.listen(PORT, () => console.log(`Server up on PORT ${PORT}. To open access http://localhost:8087/api/v1/worldcup`))

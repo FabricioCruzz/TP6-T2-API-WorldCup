@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         home: DataTypes.STRING,
         visitor: DataTypes.STRING,
-        date: DataTypes.DATE
+        match_date: DataTypes.DATE
     }, {
         timestamps: false,
         freezeTableName: true

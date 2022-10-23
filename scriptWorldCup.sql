@@ -1,8 +1,8 @@
 \c worldcup;
 
-CREATE TABLE IF NOT EXISTS matchs (
+CREATE TABLE IF NOT EXISTS match (
   	id int primary key,
-	home varchar(20),
-	visitor varchar(20),
-	matchDate date
+	home varchar(20) not null,
+	visitor varchar(20) not null,
+	match_date date not null
 );

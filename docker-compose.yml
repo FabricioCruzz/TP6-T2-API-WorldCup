@@ -1,14 +1,5 @@
 version: '3'
 services:
-  app:
-    container_name: api-node
-    build: .
-    command: npm start
-    ports:
-      - '8087:8087'
-    volumes:
-      - ./api:/usr/app
-
   database:
     container_name: db-postgres
     image: postgres:10.17
@@ -19,3 +10,14 @@ services:
       - "POSTGRES_DB=worldcup"
     ports:
       - 5441:5432
+
+  app:
+    container_name: api-node
+    image: node:alpine
+    depends_on:
+      - database
+    command: npm start
+    ports:
+      - '8087:8087'
+    volumes:
+      - ./api:/usr/app

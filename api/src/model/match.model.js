@@ -7,6 +7,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         home: DataTypes.STRING,
         visitor: DataTypes.STRING,
+        score_home: DataTypes.INTEGER,
+        score_visitor: DataTypes.INTEGER,
         match_date: DataTypes.DATE
     }, {
         timestamps: false,

@@ -24,6 +24,12 @@ npm start
 
 ## Docker
 
+Sem o docker-compose:
+```
+docker build -t node:alpine .
+docker run -p 8087:8087 node:alpine
+```
+
 > **_NOTA:_** Este projeto utiliza Docker Compose. Siga as instruções abaixo para instalar.
 
 Vide a [documentação do Docker](https://docs.docker.com/compose/install/) para instalar de acordo com o seu sistema operacional.

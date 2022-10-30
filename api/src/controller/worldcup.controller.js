@@ -10,20 +10,26 @@ const getAll = async (req, res) => {
     res.send(response)
 }
 
-const getByTeam = (req, res) => {
-    
+const getByTeam = async (req, res) => { 
+    const team = req.params.team
+    res.send(await service.getByTeam(team))
 }
 
-const getByDate = (req, res) => {
-
+const getByDate = async (req, res) => {
+    const matchDate = req.params.date
+    res.send(await service.getByDate(matchDate))
 }
 
-const update = (req, res) => {
-
+const updateMatchScore = async (req, res) => {
+    const matchId = parseInt(req.params.id, 10)
+    await service.updateMatchScore(matchId, req.body)
+    res.status(200).send('Match score updated successfully!')
 }
 
-const remove = (req, res) => {
-
+const remove = async (req, res) => {
+    const matchId = req.params.id
+    await service.remove(matchId)
+    res.status(204).send('')
 }
 
 module.exports = {
@@ -31,6 +37,6 @@ module.exports = {
     getAll,
     getByTeam,
     getByDate,
-    update,
+    updateMatchScore,
     remove
 }

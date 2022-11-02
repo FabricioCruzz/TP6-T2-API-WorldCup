@@ -25,9 +25,16 @@ npm start
 ## Docker
 
 Sem o docker-compose:
+
+Build imagem Node.js:
 ```
 docker build -t node:alpine .
 docker run -p 8087:8087 node:alpine
+```
+
+Build imagem PostgreSQL (v10.17):
+```
+docker build -t postgres:10.17 .
 ```
 
 > **_NOTA:_** Este projeto utiliza Docker Compose. Siga as instruções abaixo para instalar.

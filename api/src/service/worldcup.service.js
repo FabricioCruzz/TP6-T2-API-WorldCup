@@ -6,7 +6,11 @@ const create = async data => {
 }
 
 const getAll = async () => {
-    return await match.findAll()
+    return await match.findAll({
+        order: [
+            ['id', 'ASC']
+        ]
+    })
 }
 
 const getByTeam = async team => {

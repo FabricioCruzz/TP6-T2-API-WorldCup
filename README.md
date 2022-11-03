@@ -41,7 +41,7 @@ docker build -t postgres:10.17 .
 
 Vide a [documentação do Docker](https://docs.docker.com/compose/install/) para instalar de acordo com o seu sistema operacional.
 
-Para subir os containeres das aplicações basta executar na raiz do projeto:
+Para subir os containeres das aplicações basta executar na **raiz do projeto:**
 ```
 docker-compose up
 ```

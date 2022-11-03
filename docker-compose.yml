@@ -1,27 +1,26 @@
 version: '3.7'
 services:
   database:
+    image: postgres:latest
     container_name: db-postgres
-    image: postgres:10.17
     restart: always
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=worldcup
     volumes:
-      - ./scriptWorldCup.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./scriptWorldCup.sql:/docker-entrypoint-initdb.d/scriptWorldCup.sql
     ports:
-      - 5441:5432
+      - '5441:5432'
 
-  app:
-    container_name: api-node
+  api:
     image: node:alpine
-    restart: always
+    container_name: api-node
     depends_on:
       - database
     ports:
-      - 8087:8087
+      - '8087:8087'
+    working_dir: /app
     volumes:
       - ./api:/app
-    working_dir: /app
     command: npm start

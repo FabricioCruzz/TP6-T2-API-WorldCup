@@ -6,7 +6,7 @@ COPY ./api/package*.json ./
 
 RUN npm install
 
-COPY ./api .
+COPY ./api ./
 
 EXPOSE 8087
 

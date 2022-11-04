@@ -15,9 +15,14 @@ const getByTeam = async (req, res) => {
     res.send(await service.getByTeam(team))
 }
 
-const getByDate = async (req, res) => {
-    const matchDate = req.params.date
-    res.send(await service.getByDate(matchDate))
+const getByDay = async (req, res) => {
+    const matchDay = req.params.date
+    res.send(await service.getByDay(matchDay))
+}
+
+const getByMonth = async (req, res) => {
+    const matchMonth = req.params.date
+    res.send(await service.getByMonth(matchMonth))
 }
 
 const updateMatchScore = async (req, res) => {
@@ -36,7 +41,8 @@ module.exports = {
     create,
     getAll,
     getByTeam,
-    getByDate,
+    getByDay,
+    getByMonth,
     updateMatchScore,
     remove
 }

@@ -24,10 +24,18 @@ const getByTeam = async team => {
     })
 }
 
-const getByDate = async date => {   
+const getByDay = async day => {   
     return await match.findAll({
         where:
-            sequelize.literal(`extract(day from match_date) = ${date}`)
+            sequelize.literal(`extract(day from match_date) = ${day}`)
+      })
+
+}
+
+const getByMonth = async month => {   
+    return await match.findAll({
+        where:
+            sequelize.literal(`extract(month from match_date) = ${month}`)
       })
 
 }
@@ -52,7 +60,8 @@ module.exports = {
     create,
     getAll,
     getByTeam,
-    getByDate,
+    getByDay,
+    getByMonth,
     updateMatchScore,
     remove
 }

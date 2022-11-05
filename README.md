@@ -24,13 +24,6 @@ npm start
 
 ## Docker
 
-**Docker Hub**
-
-Baixe a [imagem da API](https://hub.docker.com/r/fabriciocruz/api-node-worldcup) com o seguinte comando:
-```
-docker pull fabriciocruz/api-node-worldcup
-```
-
 Build imagem do projeto:
 ```
 docker build . -t fabriciocruz/api-node-worldcup:1.0.0
@@ -46,10 +39,20 @@ Para subir os containeres das aplicações basta executar na **raiz do projeto:*
 docker-compose up
 ```
 
+**Docker Hub**
+
+Baixe a [imagem da API](https://hub.docker.com/r/fabriciocruz/api-node-worldcup) com o seguinte comando:
+```
+docker pull fabriciocruz/api-node-worldcup
+```
+
 ## API
 Endpoints da API:
 
-**POST** http://localhost:8087/api/v1/worldcup
+**POST** 
+```
+http://localhost:8087/api/v1/worldcup
+```
 
 **PAYLOAD**
 
@@ -65,15 +68,30 @@ Endpoints da API:
 ```
 > **_NOTA:_** O parâmetro match_date deve estar no formato "YYYY-MM-DD"
 
-**GET** http://localhost:8087/api/v1/worldcup
+**GET** 
+```
+http://localhost:8087/api/v1/worldcup
+```
 
-**GET BY TEAM** http://localhost:8087/api/v1/worldcup/:team
+**GET BY TEAM** 
+```
+http://localhost:8087/api/v1/worldcup/:team
+```
 
-**GET BY DATE - DAY** http://localhost:8087/api/v1/worldcup/date/day/:day
+**GET BY DATE - DAY** 
+```
+http://localhost:8087/api/v1/worldcup/date/day/:day
+```
 
-**GET BY DATE - MONTH** http://localhost:8087/api/v1/worldcup/date/month/:month
+**GET BY DATE - MONTH**
+```
+http://localhost:8087/api/v1/worldcup/date/month/:month
+```
 
-**PUT** http://localhost:8087/api/v1/worldcup/:matchId
+**PUT** 
+```
+http://localhost:8087/api/v1/worldcup/:matchId
+```
 
 **PAYLOAD**
 ```
@@ -87,4 +105,7 @@ Endpoints da API:
 }
 ```
 
-**DELETE** http://localhost:8087/api/v1/worldcup/:matchId
+**DELETE** 
+```
+http://localhost:8087/api/v1/worldcup/:matchId
+```

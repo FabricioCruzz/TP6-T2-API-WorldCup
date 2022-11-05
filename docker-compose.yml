@@ -14,7 +14,7 @@ services:
       - '5441:5432'
 
   api:
-    image: fabriciocruz/api-node-worldcup
+    image: fabriciocruz/api-node-worldcup:latest
     container_name: api-node
     depends_on:
       - database

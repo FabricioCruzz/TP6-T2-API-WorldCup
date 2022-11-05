@@ -31,10 +31,10 @@ Baixe a [imagem da API](https://hub.docker.com/r/fabriciocruz/api-node-worldcup)
 docker pull fabriciocruz/api-node-worldcup
 ```
 
-Build imagem Node.js:
+Build imagem do projeto:
 ```
-docker build -t node:alpine .
-docker run -p 8087:8087 node:alpine
+docker build . -t fabriciocruz/api-node-worldcup:1.0.0
+docker run -p 8087:8087 fabriciocruz/api-node-worldcup:1.0.0
 ```
 
 > **_NOTA:_** Este projeto utiliza Docker Compose. Siga as instruções abaixo para instalar.
